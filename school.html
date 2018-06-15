@@ -17,7 +17,6 @@
 
     <div class="row">
         <form class="col s12" method="post" action="http://localhost:6868/school" enctype="multipart/form-data">
-            <div class="row">
 
                 <div class="input-field col s6">
                     <input name="name" id="name" type="text" class="validate">
@@ -76,11 +75,9 @@
                     <label for="curriculum">Curriculum</label>
                 </div>
 
-            </div>
 
-            <div class="row">
 
-                <h4>Location:</h4>
+                <h4 class="col s12">Location:</h4>
 
                 <div class="input-field col s4">
                     <input name="addressLine1" id="address_line_1" type="text" class="validate">
@@ -249,10 +246,7 @@
                     <label for="instaLink">Instagram Link</label>
                 </div>
 
-            </div>
-
-
-            <div class="file-field input-field">
+            <div class="file-field input-field col s12">
                 <div class="btn">
                     <span>File</span>
                     <input type="file" name="schoolCoverPic">
@@ -262,7 +256,7 @@
                 </div>
             </div>
 
-            <button class="btn waves-effect waves-light" type="submit">Submit
+            <button class="btn waves-effect waves-light col s12 center-align" type="submit">Submit
                 <i class="material-icons right">send</i>
             </button>
 
