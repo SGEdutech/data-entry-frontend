@@ -7,15 +7,19 @@ const elem = document.querySelector('.modal');
 const instance = M.Modal.getInstance(elem);
 const form = $('#the_form');
 
-// form.submit(e => {
-//     e.preventDefault();
-//     $.ajax({
-//         type: form.attr('method'),
-//         url: form.attr('action'),
-//         data: form.serialize(),
-//         success: data => {
-//             instance.open();
-//         },
-//         error: err => console.error(err)
-//     })
-// });
+form.submit(e => {
+    e.preventDefault();
+    const formData = new FormData(form[0]);
+    $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: data => {
+            instance.open();
+        },
+        error: err => console.error(err)
+    })
+});
