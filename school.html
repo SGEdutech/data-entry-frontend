@@ -31,13 +31,30 @@
             </div>
 
             <div class="input-field col s6">
-                <input name="facilities" id="facilities" type="text" class="validate">
+                <select id="facilities" name="facilities" multiple>
+                    <option value="" disabled>Choose your option</option>
+                    <option value="Library/Study Area">Library/Study Area</option>
+                    <option value="Smart Classes">Smart Classes</option>
+                    <option value="Study Material">Study Material</option>
+                    <option value="AC Classes">AC Classes</option>
+                    <option value="Internet/WIFI">Internet/WIFI</option>
+                    <option value="Transport">Transport</option>
+                    <option value="E-Learning">E-Learning</option>
+                </select>
                 <label for="facilities">Facilities</label>
             </div>
 
             <div class="input-field col s6">
-                <input name="activities" id="activities" type="text" class="validate">
-                <label for="activities">Activities</label>
+                <select id="category" name="category" multiple>
+                    <option value="" disabled>Choose your option</option>
+                    <option value="Library/Study Area">Tuition Centers</option>
+                    <option value="Coaching Centers">Coaching Centers</option>
+                    <option value="Enhanced Learning">Enhanced Learning</option>
+                    <option value="Hobby Centers">Hobby Centers</option>
+                    <option value="Sports Center">Sports Center</option>
+                    <option value="Education Companies">Education Companies</option>
+                </select>
+                <label for="category">Category</label>
             </div>
 
             <div class="input-field col s6">
@@ -65,12 +82,7 @@
                 <label for="principal_name">Principal's Name</label>
             </div>
 
-            <div class="input-field col s12">
-                <input name="description" id="description" type="text" class="validate">
-                <label for="description">Description</label>
-            </div>
-
-            <div class="input-field col s12">
+            <div class="input-field col s6">
                 <select name="curriculum" id="curriculum">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="CBSE">CBSE</option>
@@ -82,6 +94,10 @@
                 <label for="curriculum">Curriculum</label>
             </div>
 
+            <div class="input-field col s12">
+                <input name="description" id="description" type="text" class="validate">
+                <label for="description">Description</label>
+            </div>
 
             <h4 class="col s12">Location:</h4>
 
