@@ -13,14 +13,48 @@
 
 <div class="container">
 
+    <div id="school_added_modal" class="modal">
+        <div class="modal-content">
+            <h4>Tuition Added</h4>
+            <p>Keep going</p>
+        </div>
+    </div>
+
     <h1 class="center-align">Add a tuition</h1>
 
     <div class="row">
-        <form class="col s12" method="post" action="http://localhost:6868/tuition" enctype="multipart/form-data">
+        <form id="the_form" class="col s12" method="post" action="/tuition" enctype="multipart/form-data">
 
             <div class="input-field col s6">
                 <input name="name" id="name" type="text" class="validate">
                 <label for="name">Name</label>
+            </div>
+
+            <div class="input-field col s6">
+                <select id="facilities" name="facilities" multiple>
+                    <option value="" disabled>Choose your option</option>
+                    <option value="Library/Study Area">Library/Study Area</option>
+                    <option value="Smart Classes">Smart Classes</option>
+                    <option value="Study Material">Study Material</option>
+                    <option value="AC Classes">AC Classes</option>
+                    <option value="Internet/WIFI">Internet/WIFI</option>
+                    <option value="Transport">Transport</option>
+                    <option value="E-Learning">E-Learning</option>
+                </select>
+                <label for="facilities">Facilities</label>
+            </div>
+
+            <div class="input-field col s6">
+                <select id="category" name="category">
+                    <option value="" disabled>Choose your option</option>
+                    <option value="Library/Study Area">Tuition Centers</option>
+                    <option value="Coaching Centers">Coaching Centers</option>
+                    <option value="Enhanced Learning">Enhanced Learning</option>
+                    <option value="Hobby Centers">Hobby Centers</option>
+                    <option value="Sports Center">Sports Center</option>
+                    <option value="Education Companies">Education Companies</option>
+                </select>
+                <label for="category">Category</label>
             </div>
 
             <div class="input-field col s6">

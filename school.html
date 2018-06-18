@@ -13,10 +13,17 @@
 
 <div class="container">
 
+    <div id="school_added_modal" class="modal">
+        <div class="modal-content">
+            <h4>School Added</h4>
+            <p>Keep going</p>
+        </div>
+    </div>
+
     <h1 class="center-align">Add a school</h1>
 
     <div class="row">
-        <form class="col s12" method="post" action="http://localhost:6868/school" enctype="multipart/form-data">
+        <form id="the_form" class="col s12" action="http://localhost:8080/school" method="post" enctype="multipart/form-data">
 
             <div class="input-field col s6">
                 <input name="name" id="name" type="text" class="validate">
@@ -117,6 +124,7 @@
 
             <div class="input-field col s5">
                 <select name="fromDay" id="from_day">
+                    <option value="" disabled selected>To</option>
                     <option value="Sunday">Sunday</option>
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
@@ -132,6 +140,7 @@
 
             <div class="input-field col s5">
                 <select name="toDay" id="to_day">
+                    <option value="" disabled selected>To</option>
                     <option value="Sunday">Sunday</option>
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
@@ -140,7 +149,7 @@
                     <option value="Friday">Friday</option>
                     <option value="Saturday">Saturday</option>
                 </select>
-                <label for="to_day">From</label>
+                <label for="to_day">To</label>
             </div>
 
 
