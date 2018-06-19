@@ -14,6 +14,7 @@ form.submit(e => {
         url: form.attr('action'),
         data: form.serialize(),
         success: data => {
+            $('input').val('');
             instance.open();
         },
         error: err => console.error(err)
