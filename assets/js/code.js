@@ -9,12 +9,15 @@ const form = $('#the_form');
 
 form.submit(e => {
     e.preventDefault();
+    const formData = new FormData(form[0]);
     $.ajax({
         type: form.attr('method'),
         url: form.attr('action'),
-        data: form.serialize(),
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formData,
         success: data => {
-            $('input').val('');
             instance.open();
         },
         error: err => console.error(err)
