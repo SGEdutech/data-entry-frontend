@@ -23,7 +23,7 @@
     <h1 class="center-align">Add a tuition</h1>
 
     <div class="row">
-        <form id="the_form" class="col s12" method="post" action="/tuition" enctype="multipart/form-data">
+        <form id="the_form" class="col s12" method="post" action="http://localhost:6868/tuition" enctype="multipart/form-data">
 
             <div class="input-field col s6">
                 <input name="name" id="name" type="text" class="validate">
@@ -107,42 +107,88 @@
             </div>
 
             <h4 class="col s12">Days of operation:</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Closed</th>
+                </tr>
+                </thead>
 
-            <div class="input-field col s5">
-                <select name="fromDay" id="from_day">
-                    <option value="" disabled selected>From</option>
-                    <option value="Sunday">Sunday</option>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                </select>
-                <label for="from_day">From</label>
-            </div>
-
-            <p class="center-align col s2">To</p>
-
-            <div class="input-field col s5">
-                <select name="toDay" id="to_day">
-                    <option value="" disabled selected>To</option>
-                    <option value="Sunday">Sunday</option>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                </select>
-                <label for="to_day">To</label>
-            </div>
-
-
-            <h4 class="col s12">Timing:</h4>
-            <input name="fromTime" type="text" class="timepicker col s5" placeholder="Start">
-            <p class="col s2 center-align">To</p>
-            <input name="toTime" type="text" class="timepicker col s5" placeholder="End">
+                <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td id="monFrom"><input name="day_monday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="monTo"><input name="day_monday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxMon"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td id="tueFrom"><input name="day_tuesday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="tueTo"><input name="day_tuesday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxTues"/>
+                        <span></span>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td id="wedFrom"><input name="day_wednesday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="wedTo"><input name="day_wednesday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxWed"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td id="thrFrom"><input name="day_thursday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="thrTo"><input name="day_thursday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxThr"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td id="friFrom"><input name="day_friday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="friTo"><input name="day_friday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxFri"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td id="satFrom"><input name="day_saturday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="satTo"><input name="day_saturday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxSat"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td id="sunFrom"><input name="day_sunday_from" type="text" class="timepicker col s5" placeholder="Start"></td>
+                    <td id="sunTo"><input name="day_sunday_to" type="text" class="timepicker col s5" placeholder="End"></td>
+                    <td><label>
+                        <input type="checkbox" class="filled-in" id="cboxSun"/>
+                        <span></span>
+                    </label>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
             <h4 class="col s12">Contact:</h4>
 
@@ -215,5 +261,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script src="assets/js/code.js"></script>
+<script src="assets/js/tuition.js"></script>
 </body>
 </html>
